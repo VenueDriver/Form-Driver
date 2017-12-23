@@ -1,16 +1,11 @@
 var express = require('express');
 var app = express();
 
-app.get('/', function(req, res) {
-  res.send({
-    "Output": "Hello World!"
-  });
-});
+const awsServerlessExpressMiddleware = require('aws-serverless-express/middleware')
+app.use(awsServerlessExpressMiddleware.eventContext())
 
 app.post('/', function(req, res) {
-  res.send({
-    "Output": "Hello World!"
-  });
+  res.json(req.apiGateway.event)
 });
 
 
