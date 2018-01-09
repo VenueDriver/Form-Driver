@@ -1,7 +1,9 @@
 'use strict';
 
-// sample code from AWS support
 exports.handler = (event, context, callback) => {
-    // TODO implement
-    callback(null, event);
+    callback(null,
+      {
+        'statusCode': 200,
+        'body': JSON.stringify(event)
+      });
 };
