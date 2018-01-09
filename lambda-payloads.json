@@ -1,0 +1,35 @@
+{
+    "FormDriver": {
+        "lambda": {
+            "data": true
+        },
+        "apigateway": {
+            "path": "/",
+            "method": {
+                "value": "POST",
+                "items": [
+                    "GET",
+                    "POST",
+                    "PUT",
+                    "DELETE",
+                    "HEAD",
+                    "OPTIONS",
+                    "PATCH"
+                ]
+            },
+            "body": {
+                "data": "test"
+            }
+        }
+    },
+    "": {
+        "apigateway": {
+            "path": "",
+            "method": {
+                "value": "",
+                "items": []
+            },
+            "body": {}
+        }
+    }
+}
