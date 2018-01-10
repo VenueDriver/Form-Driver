@@ -1,7 +1,11 @@
 {
     "FormDriver": {
         "lambda": {
-            "data": true
+            "body": {
+                "to": "ryan@hakkasan.com",
+                "subject": "test message",
+                "text": "lorem ipsum"
+            }
         },
         "apigateway": {
             "path": "/",
@@ -18,7 +22,9 @@
                 ]
             },
             "body": {
-                "data": "test"
+                "to": "ryan@hakkasan.com",
+                "subject": "test message",
+                "text": "lorem ipsum"
             }
         }
     },

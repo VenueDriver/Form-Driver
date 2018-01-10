@@ -1,9 +1,16 @@
 'use strict';
 
+var Notification = require('./lib/notification')
+
 exports.handler = (event, context, callback) => {
-    callback(null,
-      {
-        'statusCode': 200,
-        'body': JSON.stringify(event)
-      });
+  // Send AWS SES notification.
+  var notification = new Notification()
+  notification.notify(event)
+
+  // Respond to the requestor.
+  callback(null,
+    {
+      'statusCode': 200,
+      'body': 'Notification sent.'
+    });
 };

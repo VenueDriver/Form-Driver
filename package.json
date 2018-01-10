@@ -14,8 +14,7 @@
         "watch-run": "^1.2.5"
     },
     "dependencies": {
-        "express": "latest",
-        "aws-serverless-express": "latest"
+        "aws-sdk": "^2.179.0"
     },
     "scripts": {
         "test": "./node_modules/.bin/nyc ./node_modules/mocha/bin/mocha",
