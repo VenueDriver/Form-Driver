@@ -14,7 +14,8 @@
         "watch-run": "^1.2.5"
     },
     "dependencies": {
-        "aws-sdk": "^2.179.0"
+        "aws-sdk": "^2.179.0",
+        "querystring": "0.2.0"
     },
     "scripts": {
         "test": "./node_modules/.bin/nyc ./node_modules/mocha/bin/mocha",
