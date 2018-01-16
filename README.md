@@ -1,13 +1,13 @@
-Welcome to the AWS CodeStar sample web service
-==============================================
+Form Driver
+===========
 
-This sample code helps get you started with a simple Express web service
-deployed by AWS CloudFormation to AWS Lambda and Amazon API Gateway.
+A serverless form mailer micro service.  So that you can make the rest of your
+web site static.
 
 What's Here
 -----------
 
-This sample includes:
+This project includes:
 
 * README.md - this file
 * buildspec.yml - this file is used by AWS CodeBuild to package your
@@ -18,26 +18,26 @@ This sample includes:
   Gateway.
 
 
-What Do I Do Next?
-------------------
+How do I run my own?
+--------------------
 
-If you have checked out a local copy of your repository you can start making
-changes to the sample code.  We suggest making a small change to app.js first,
-so you can see how changes pushed to your project's repository are automatically
-picked up by your project pipeline and deployed to AWS Lambda and Amazon API Gateway.
-(You can watch the pipeline progress on your AWS CodeStar project dashboard.)
-Once you've seen how that works, start developing your own code, and have fun!
+1. Set up advice.
+2. Create an IAM that can send email with SES.
+3. write your IAM credentials in config/aws.json
 
-Learn more about Serverless Application Model (SAM) and how it works here:
-https://github.com/awslabs/serverless-application-model/blob/master/HOWTO.md
+Running the app
+---------------
 
-AWS Lambda Developer Guide:
-http://docs.aws.amazon.com/lambda/latest/dg/deploying-lambda-apps.html
+```sam local start-api -p 8080```
 
-Learn more about AWS CodeStar by reading the user guide, and post questions and
-comments about AWS CodeStar on our forum.
+You can run this with the 'Run' button in the Cloud9 environment.
 
-AWS CodeStar User Guide:
-http://docs.aws.amazon.com/codestar/latest/userguide/welcome.html
+Running tests
+-------------
 
-AWS CodeStar Forum: https://forums.aws.amazon.com/forum.jspa?forumID=248
+```npm test```
+
+See also
+--------
+
+* https://codehabitude.com/2016/04/05/forms-to-emails-using-aws-lambda-api-gateway/

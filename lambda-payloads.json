@@ -1,12 +1,6 @@
 {
     "FormDriver": {
-        "lambda": {
-            "body": {
-                "to": "ryan@hakkasan.com",
-                "subject": "test message",
-                "text": "lorem ipsum"
-            }
-        },
+        "lambda": {},
         "apigateway": {
             "path": "/",
             "method": {
